@@ -73,7 +73,7 @@ tar -xvf $CACHE_DIR/vendor.tar.xz -C $BUILD_DIR
 
 # save ENVs for building Golang binaries
 echo "-I$ORIG_BUILD_DIR/.heroku/vendor/include" > $ENV_DIR/CGO_CPPFLAGS
-echo "-L$ORIG_BUILD_DIR/.heroku/vendor/lib -lopencv_core -lopencv_face -lopencv_videoio -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_objdetect -lopencv_features2d -lopencv_video -lopencv_dnn -lopencv_xfeatures2d -lopencv_plot -lopencv_tracking" > $ENV_DIR/CGO_LDFLAGS
+echo "-L$ORIG_BUILD_DIR/.heroku/vendor/lib -lopencv_core -lopencv_face -lopencv_imgproc -lopencv_imgcodecs -lopencv_dnn" > $ENV_DIR/CGO_LDFLAGS
 echo "--std=c++1z" > $ENV_DIR/CGO_CXXFLAGS
 
 # creating env variables
@@ -92,4 +92,4 @@ deep-mv $BUILD_DIR/.profile.d $ORIG_BUILD_DIR/.profile.d
 
 echo $ORIG_BUILD_DIR
 ls $ORIG_BUILD_DIR -a
-ls $ORIG_BUILD_DIR/.heroku/vendor
+ls $ORIG_BUILD_DIR/.heroku/vendor/lib
