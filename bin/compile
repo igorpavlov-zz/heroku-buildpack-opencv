@@ -89,3 +89,7 @@ EOF
 
 deep-mv $BUILD_DIR/.heroku $ORIG_BUILD_DIR/.heroku
 deep-mv $BUILD_DIR/.profile.d $ORIG_BUILD_DIR/.profile.d
+
+echo $ORIG_BUILD_DIR
+ls $ORIG_BUILD_DIR
+ls /.heroku
