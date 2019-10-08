@@ -52,6 +52,10 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "########################################################"
+echo $BUILD_DIR
+echo "########################################################"
+
 APP_DIR="/app"
 ORIG_BUILD_DIR=$BUILD_DIR
 BUILD_DIR=$APP_DIR
