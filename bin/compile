@@ -92,4 +92,4 @@ deep-mv $BUILD_DIR/.profile.d $ORIG_BUILD_DIR/.profile.d
 
 echo $ORIG_BUILD_DIR
 ls $ORIG_BUILD_DIR -a
-ls $ORIG_BUILD_DIR/.heroku
+ls $ORIG_BUILD_DIR/.heroku/vendor
